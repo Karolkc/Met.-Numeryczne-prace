@@ -50,6 +50,20 @@ def train(x, y, lr=0.001, epochs=3000):
             y_preds = np.array(predict(x))
             print(f"Epoch {epoch}: Loss = {loss(y, y_preds)}")
 
+def model_plot(x, y, predict):
+    plt.style.use('dark_background')
+
+    x_args = np.linspace(min(x), max(x), 200).reshape(-1, 1)
+    y_args = predict(x_args).flatten()
+    plt.scatter(x, y, color='blue', label='trening')
+    plt.plot(x_args, y_args, color='pink', label='model')
+
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('trening a model')
+    plt.legend()
+    plt.show()
+
 
 if __name__ == "__main__":
     print("kw")
@@ -62,3 +76,5 @@ if __name__ == "__main__":
 
     predictions = predict(x_test)
     print(predictions)
+
+    model_plot(x_train, y_train, predict)
