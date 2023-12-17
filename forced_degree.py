@@ -25,6 +25,20 @@ def train(x, y, lr=0.0001, epochs=100000):
         if epoch % 5000 == 0:
             print(f"Epoch {epoch}: Loss = {loss(y, y_pred)}")
 
+def model_plot(x, y, predict):
+    plt.style.use('dark_background')
+
+    x_args = np.linspace(min(x), max(x), 200)
+    y_args = predict(x_args)
+    plt.scatter(x, y, color='blue', label='trening')
+    plt.plot(x_args, y_args, color='pink', label='model')
+
+    plt.xlabel('x')
+    plt.ylabel('y')
+    plt.title('trening a model')
+    plt.legend()
+    plt.show()
+
 
 if __name__ == "__main__":
     print("kw")
@@ -42,3 +56,5 @@ if __name__ == "__main__":
 
     print("Predykcje:", predictions.flatten())
     print("Postać funkcji regresji: {:.2f}x^3 + {:.2f}x^2 + {:.2f}x + {:.2f}".format(*weights.flatten()))
+
+    model_plot(x, y, predict)
