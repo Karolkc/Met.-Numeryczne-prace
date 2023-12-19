@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 #ustawiony na "sztywno" stopień wielomianu
 polynomial_degree = 3
