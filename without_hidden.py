@@ -10,7 +10,7 @@ def loss(y, y_pred):
 def predict(x):
     return weight * x + bias
 
-#dla sieci bez warstwy ukrytej nie robię funkcji aktywacji
+#dla sieci bez warstwy ukrytej nie robię funkcji aktywacji, aktywacja liniowa
 def train(x, y, lr=0.01, epochs=1000):
     global weight, bias
     for epoch in range(epochs):
