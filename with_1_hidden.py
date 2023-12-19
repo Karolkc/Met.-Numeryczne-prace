@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 #ilość neuonów w warstwie ukrytej, stąd też kształt macierzy dla wag i biasów
 hidden_neurons = 10
