@@ -1,6 +1,7 @@
 W repozytorium bazowo znajdują się 2 pliki: without_hidden.py oraz with_1_hidden.py  
 	
-Są to "ręcznie" napisane sieci neuronowe, odpowiednio bez i z warstwą ukrytą.
+Są to "ręcznie" napisane programy bazujące na architekturze sieci neuronowych. Ze względu na brak aktywaji nieliniowej i warstw ukrytych, programowi z pliku without_hidden_py bliżej do perceptronu, a wynik działania programu
+będzie zbiegał do MNK.
 
 W przypadku sieci bez warstw ukrytych można łatwo przejść do postaci liniowej modelu regresji pobierając z modelu ostatnią obliczoną wagę oraz bias.
 
